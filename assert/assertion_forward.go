@@ -195,7 +195,7 @@ func (a *Assertions) Equalf(expected interface{}, actual interface{}, msg string
 //
 //   actualObj, err := SomeFunction()
 //   if a.Error(err) {
-// 	   assert.Equal(t, expectedError, err)
+// 	   assert.Equal(t, expectedError, err.Error())
 //   }
 func (a *Assertions) Error(err error, msgAndArgs ...interface{}) bool {
 	if h, ok := a.t.(tHelper); ok {

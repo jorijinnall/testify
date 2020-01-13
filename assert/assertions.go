@@ -1268,7 +1268,7 @@ func NoError(t TestingT, err error, msgAndArgs ...interface{}) bool {
 //
 //   actualObj, err := SomeFunction()
 //   if assert.Error(t, err) {
-//	   assert.Equal(t, expectedError, err)
+//	   assert.Equal(t, expectedError, err.Error())
 //   }
 func Error(t TestingT, err error, msgAndArgs ...interface{}) bool {
 	if h, ok := t.(tHelper); ok {
